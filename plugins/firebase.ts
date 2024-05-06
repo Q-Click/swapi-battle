@@ -3,13 +3,15 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 export default defineNuxtPlugin((nuxtApp) => {
+	const config = useRuntimeConfig();
+
 	const firebaseConfig = {
-		apiKey: "AIzaSyCvSxWN1h3A5qwJstlxjPxw-ib6MOA1-ck",
-		authDomain: "swapi-battle.firebaseapp.com",
-		projectId: "swapi-battle",
-		storageBucket: "swapi-battle.appspot.com",
-		messagingSenderId: "876638175189",
-		appId: "1:876638175189:web:62d6711e0b7ea330aa475c",
+		apiKey: config.firebaseApiKey as string,
+		authDomain: config.firebaseAuthDomain as string,
+		projectId: config.firebaseProjectId as string,
+		storageBucket: config.firebaseStorageBucket as string,
+		messagingSenderId: config.firebaseMessagingSenderId as string,
+		appId: config.firebaseAppId as string,
 	};
 
 	const app = initializeApp(firebaseConfig);
