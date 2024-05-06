@@ -1,6 +1,6 @@
 # SWAPI battle
 
-Application available under `https://swapi-battle.web.app/`
+Application available under https://swapi-battle.web.app
 
 ## Setup
 
